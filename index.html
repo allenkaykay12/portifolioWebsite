@@ -1,12 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portifolio Website</title>
+    <meta charset="utf-8" />
+    <title>MyFolio - Portfolio HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Portfolio HTML Template" name="keywords" />
+    <meta content="Portfolio HTML Template" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Solway:400,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Libraries -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
   </head>
+
   <body>
-    <h1>Hello!</h1>
-    <h3>This is my portifolio website</h3>
+    <!-- Header Start -->
+    <div class="top-header" id="top-header">
+      <div id="particles-js"></div>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-12">
+            <img src="img/me.JPG" alt="Allen Kayesu" />
+          </div>
+
+          <div class="col-md-12">
+            <h1>I'm Allen Kayesu</h1>
+          </div>
+
+          <div class="col-md-12">
+            <p>
+              Data Analyst, Software Engineer, Web Developer, Front End
+              Developer
+            </p>
+            <h2></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Nav Start -->
+    <div class="header">
+      <div class="container">
+        <div class="logo pull-left">
+          <h1><a href="index.html">KA</a></h1>
+        </div>
+
+        <nav id="nav-menu-container">
+          <ul class="nav-menu">
+            <li><a href="#top-header">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact me</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- Nav End -->
+
+    <!-- About Me Start-->
+    <div class="about" id="about">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="img/me.JPG" alt="Allen Kayesu" />
+          </div>
+
+          <div class="col-md-6 col-lg-8">
+            <header class="section-header">
+              <h2>About Me</h2>
+            </header>
+            <h3><strong>Name:</strong> Allen Kayesu</h3>
+
+            <p>
+              I'm a passionate and driven student with a strong interest in
+              computer science, data analysis, and software engineering. I enjoy
+              building practical and impactful digital solutions, and I'm
+              constantly exploring new technologies to expand my skills. I have
+              experience working as a data analyst and I have developed some
+              projects that showcase my skills in Software engineering and web
+              development.
+            </p>
+            <p>
+              Below is a link to my CV, which provides more details about my
+              education, skills, and projects. Feel free to download or view it.
+            </p>
+
+            <a
+              href="img/cv.pdf"
+              target="_blank"
+              download
+              style="margin-right: 10px"
+              >Download CV</a
+            >
+            <a href="img/cv.pdf" target="_blank">View CV</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Technical Skills -->
+          <div class="col-md-6">
+            <div class="skills" id="technical-skills">
+              <h3>Technical Skills</h3>
+              <ul id="tech-skills-list"></ul>
+              <input type="text" id="new-tech-skill" placeholder="Skill name" />
+              <input
+                type="number"
+                id="new-tech-skill-level"
+                placeholder="Level (%)"
+                min="0"
+                max="100"
+              />
+              <button onclick="addSkill('tech')">Add Skill</button>
+            </div>
+          </div>
+          <!-- Creative Skills -->
+          <div class="col-md-6">
+            <div class="skills" id="creative-skills">
+              <h3>Creative Skills</h3>
+              <ul id="creative-skills-list"></ul>
+              <input
+                type="text"
+                id="new-creative-skill"
+                placeholder="Skill name"
+              />
+              <input
+                type="number"
+                id="new-creative-skill-level"
+                placeholder="Level (%)"
+                min="0"
+                max="100"
+              />
+              <button onclick="addSkill('creative')">Add Skill</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About Me End-->
+
+    <!-- Portfolio Start -->
+    <div class="portfolio" id="portfolio">
+      <div class="container">
+        <header class="section-header">
+          <h3 class="section-title">My Portfolio</h3>
+          <p>
+            Here is a collection of my projects that I worked on this spring in
+            my Communication Lab Class.
+          </p>
+        </header>
+        <div class="row portfolio-container">
+          <!-- Project 1 -->
+          <div class="col-lg-4 col-md-6 portfolio-item web-dev">
+            <div class="portfolio-wrap">
+              <figure>
+                <img
+                  src="img/kindness.jpg"
+                  class="img-fluid"
+                  alt="Small Gesture"
+                />
+                <a
+                  href="https://allenkaykay12.github.io/comlabVideoProject/"
+                  class="link-details"
+                  target="_blank"
+                  title="View Live"
+                >
+                  <i class="fa fa-link"></i>
+                </a>
+                <h4 class="portfolio-title">
+                  <a
+                    href="https://allenkaykay12.github
+          .       io/comlabVideoP
+                roject/"
+                    target="_blank"
+                  >
+                    Small Gesture
+                  </a>
+                  <span>Web Development</span>
+                </h4>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-lg-4 col-md-6 portfolio-item web-dev">
+            <div class="portfolio-wrap">
+              <figure>
+                <img
+                  src="img/treasure.jpg"
+                  class="img-fluid"
+                  alt="Interactive Comic"
+                />
+
+                <a
+                  href="https://allen
+              kaykay12.github.io/interactive_comic/"
+                  class="link-details"
+                  target="_blank"
+                  title="View Live"
+                >
+                  <i class="fa fa-link"></i>
+                </a>
+                <h4 class="portfolio-title">
+                  <a
+                    href="https://allenkaykay12.github.io/interactive_comic/"
+                    target="_blank"
+                  >
+                    Interactive Comic: Treasure Hunt
+                  </a>
+                  <span>Web Development</span>
+                </h4>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-lg-4 col-md-6 portfolio-item web-dev">
+            <div class="portfolio-wrap">
+              <figure>
+                <img
+                  src="img/audio.jpg"
+                  class="img-fluid"
+                  alt="Sound Project"
+                />
+
+                <a
+                  href="https://alinoorisnerd.github.io/commlab_assign3/"
+                  class="link-details"
+                  target="_blank"
+                  title="View Live"
+                >
+                  <i class="fa fa-link"></i>
+                </a>
+                <h4 class="portfolio-title">
+                  <a
+                    href="https://alinoorisnerd.github.io/commlab_assign3/"
+                    target="_blank"
+                  >
+                    Interactive Comic: Treasure Hunt
+                  </a>
+                  <span>Web Development</span>
+                </h4>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Project 4-->
+          <div class="col-lg-4 col-md-6 portfolio-item web-dev">
+            <div class="portfolio-wrap">
+              <figure>
+                <img
+                  src="img/video.jpg"
+                  class="img-fluid"
+                  alt="Video Project"
+                />
+
+                <a
+                  href="https://allenkaykay12.github.io/comlabVideoProject/"
+                  class="link-details"
+                  target="_blank"
+                  title="View Live"
+                >
+                  <i class="fa fa-link"></i>
+                </a>
+                <h4 class="portfolio-title">
+                  <a
+                    href="https://allenkaykay12.github.io/comlabVideoProject/"
+                    target="_blank"
+                  >
+                    Interactive Comic: Treasure Hunt
+                  </a>
+                  <span>Web Development</span>
+                </h4>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Portfolio End -->
+
+    <!-- Contact Start -->
+    <div class="contact" id="contact">
+      <div class="container">
+        <header class="section-header">
+          <h3>Contact Me</h3>
+          <p>
+            Interested in collaborating or just want to connect? Fill out the
+            form below and I'll get back to you!
+          </p>
+        </header>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <form
+              action="mailto:allenkayesu10@gmail.com"
+              method="POST"
+              enctype="text/plain"
+              onsubmit="setTimeout(function(){ window.location.reload(); }, 100);"
+            >
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  name="message"
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <div class="footer">
+      <div class="container">
+        <div class="copyright">
+          <p>
+            &copy; Copyright <a href="https://htmlcodex.com">HTML Codex</a>. All
+            Rights Reserved
+          </p>
+          <p>Powered by <a href="https://htmlcodex.com">HTML Codex</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- Footer end -->
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/stickyjs/sticky.js"></script>
+    <script src="lib/superfish/hoverIntent.js"></script>
+    <script src="lib/superfish/superfish.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 60 },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.3 },
+          size: { value: 3 },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.2,
+            width: 1,
+          },
+          move: { enable: true, speed: 2 },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "repulse" },
+            onclick: { enable: true, mode: "push" },
+          },
+          modes: {
+            repulse: { distance: 100 },
+            push: { particles_nb: 4 },
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+
+    <script>
+      // Initial skills
+      let techSkills = [
+        { name: "HTML", level: 85 },
+        { name: "CSS", level: 95 },
+        { name: "C++", level: 80 },
+        { name: "MySQL", level: 90 },
+      ];
+      let creativeSkills = [
+        { name: "Adobe Photoshop", level: 85 },
+        { name: "Adobe Illustrator", level: 75 },
+        { name: "UI/UX Design", level: 80 },
+        { name: "Figma", level: 70 },
+      ];
+
+      function renderSkills(type) {
+        const listId =
+          type === "tech" ? "tech-skills-list" : "creative-skills-list";
+        const skills = type === "tech" ? techSkills : creativeSkills;
+        const ul = document.getElementById(listId);
+        ul.innerHTML = "";
+        skills.forEach((skill, idx) => {
+          ul.innerHTML += `
+            <li>
+              <div class="skill-name">
+                <p>${skill.name}</p>
+                <p>${skill.level}%</p>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width:${skill.level}%"></div>
+              </div>
+              <button onclick="removeSkill('${type}',${idx})">Remove</button>
+            </li>
+          `;
+        });
+      }
+
+      function addSkill(type) {
+        const nameInput = document.getElementById(
+          type === "tech" ? "new-tech-skill" : "new-creative-skill"
+        );
+        const levelInput = document.getElementById(
+          type === "tech" ? "new-tech-skill-level" : "new-creative-skill-level"
+        );
+        const name = nameInput.value.trim();
+        const level = parseInt(levelInput.value, 10);
+        if (name && !isNaN(level) && level >= 0 && level <= 100) {
+          if (type === "tech") techSkills.push({ name, level });
+          else creativeSkills.push({ name, level });
+          nameInput.value = "";
+          levelInput.value = "";
+          renderSkills(type);
+        }
+      }
+
+      function removeSkill(type, idx) {
+        if (type === "tech") techSkills.splice(idx, 1);
+        else creativeSkills.splice(idx, 1);
+        renderSkills(type);
+      }
+
+      // Initial render
+      renderSkills("tech");
+      renderSkills("creative");
+    </script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
   </body>
 </html>
