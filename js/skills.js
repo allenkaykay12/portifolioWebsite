@@ -53,7 +53,7 @@ function renderSkills(type) {
 /**
  * Adds a new skill to either the technical or creative skills list.
  * Reads the skill name and level from the input fields, adds to the array,
- * and re-renders the list.
+ * and re-renders the list. Also saves to localStorage.
  * @param {string} type - "tech" or "creative"
  */
 function addSkill(type) {
@@ -75,11 +75,13 @@ function addSkill(type) {
     nameInput.value = "";
     levelInput.value = "Beginner";
     renderSkills(type);
+    saveSkills(); // Save updated skills to localStorage
   }
 }
 
 /**
  * Removes a skill from the specified list by index and re-renders.
+ * Also saves the updated list to localStorage.
  * @param {string} type - "tech" or "creative"
  * @param {number} idx - Index of the skill to remove
  */
@@ -87,10 +89,30 @@ function removeSkill(type, idx) {
   if (type === "tech") techSkills.splice(idx, 1);
   else creativeSkills.splice(idx, 1);
   renderSkills(type);
+  saveSkills(); // Save updated skills to localStorage
 }
 
-// When the page loads, render both skills lists
+/**
+ * Saves both skills arrays to localStorage so they persist between sessions.
+ */
+function saveSkills() {
+  localStorage.setItem("techSkills", JSON.stringify(techSkills));
+  localStorage.setItem("creativeSkills", JSON.stringify(creativeSkills));
+}
+
+/**
+ * Loads skills from localStorage if available, so user changes persist.
+ */
+function loadSkills() {
+  const savedTech = localStorage.getItem("techSkills");
+  const savedCreative = localStorage.getItem("creativeSkills");
+  if (savedTech) techSkills = JSON.parse(savedTech);
+  if (savedCreative) creativeSkills = JSON.parse(savedCreative);
+}
+
+// When the page loads, load skills from localStorage and render both lists
 document.addEventListener("DOMContentLoaded", function () {
+  loadSkills();
   renderSkills("tech");
   renderSkills("creative");
 });
