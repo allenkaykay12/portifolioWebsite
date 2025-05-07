@@ -2,7 +2,9 @@
 /* -------- General CSS -------- */
 /* ============================= */
 
+/* -------- General site styles -------- */
 body {
+  /* Main font and background */
   color: #666666;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
@@ -10,6 +12,7 @@ body {
 }
 
 a {
+  /* Link color and hover effect */
   color: #af9483;
   transition: 0.5s;
 }
@@ -22,24 +25,24 @@ a:focus {
   text-decoration: none;
 }
 
-p {
-  padding: 0;
-  margin: 0 0 15px 0;
-}
-
+p,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  /* Typography and spacing */
+  padding: 0;
+  margin: 0 0 15px 0;
   font-family: "Solway", serif;
   color: #666666;
-  margin: 0 0 15px 0;
   padding: 0;
 }
 
+/* -------- Back to top button -------- */
 .back-to-top {
+  /* Styles for the floating button */
   position: fixed;
   display: none;
   background: #af9483;
@@ -65,7 +68,9 @@ h6 {
 /* ------ Top Header CSS ------- */
 /* ============================= */
 
+/* -------- Top Header (hero section) -------- */
 .top-header {
+  /* Main hero section with particles background */
   position: relative;
   overflow: hidden;
   display: table;
@@ -81,6 +86,7 @@ h6 {
 }
 
 #particles-js {
+  /* Positioning for particles.js canvas */
   position: absolute;
   width: 100%;
   height: 100%;
@@ -99,6 +105,7 @@ h6 {
 }
 
 .top-header img {
+  /* Profile image in hero */
   max-height: 180px;
   width: auto;
   max-width: 100%;
@@ -108,7 +115,10 @@ h6 {
   border: 8px solid rgba(256, 256, 256, 0.15);
 }
 
-.top-header h1 {
+.top-header h1,
+.top-header h2,
+.top-header p {
+  /* Main heading and subheading */
   font-size: 5vw;
   font-weight: 700;
   color: #ffffff;
@@ -135,12 +145,15 @@ h6 {
 /* -------- Header CSS --------- */
 /* ============================= */
 
+/* -------- Navigation Bar -------- */
 .header {
+  /* Navbar background and height */
   background: #af9483;
   height: 70px;
 }
 
 .header .logo {
+  /* Logo styles */
   margin: 14px 25px 0 0;
 }
 
@@ -195,6 +208,7 @@ h6 {
 }
 
 .nav-menu {
+  /* Flexbox for equal spacing of nav links */
   display: flex;
   justify-content: center; /* Center items horizontally */
   align-items: center;
@@ -209,6 +223,7 @@ h6 {
 }
 
 .nav-menu li a {
+  /* Nav link styles and hover */
   color: white;
   font-weight: 600;
   font-size: 1rem;
@@ -308,6 +323,7 @@ h6 {
   margin: 0;
 }
 
+/* Mobile nav styles */
 #mobile-nav-toggle {
   position: fixed;
   right: 0;
@@ -429,6 +445,31 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* ------- Header Title -------- */
 /* ============================= */
 
+/* -------- Section Headers -------- */
+.section-header {
+  /* Align section titles and add underline */
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.section-header .section-title {
+  /* Title color, size, underline */
+  color: #af9483;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #af9483;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.section-header p {
+  /* Subtitle/description under section title */
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  color: #666;
+}
+
 .section-header h2,
 .section-header h3 {
   display: inline-block;
@@ -485,7 +526,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* ------- About Me CSS -------- */
 /* ============================= */
 
+/* -------- About Me Section -------- */
 .about {
+  /* Padding and layout for about section */
   padding: 60px 0 15px 0;
   position: relative;
 }
@@ -495,6 +538,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .about img {
+  /* About section profile image */
   width: 100%;
 }
 
@@ -530,6 +574,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .about .skills h3 {
+  /* Skills section headings */
   font-size: 22px;
   font-weight: 700;
   color: #666666;
@@ -562,6 +607,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 0;
 }
 
+/* Add skill button styles */
 .skills button {
   margin: 5px 0 10px 0;
   padding: 4px 12px;
@@ -582,11 +628,63 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: inline-block;
 }
 
+/* Skill level badge styles */
+.badge-skill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.95em;
+  color: #fff;
+  margin-left: 10px;
+}
+.badge-skill.beginner {
+  background: #b0bec5;
+}
+.badge-skill.intermediate {
+  background: #00bcd4;
+}
+.badge-skill.advanced {
+  background: #8bc34a;
+}
+.badge-skill.expert {
+  background: #ff9800;
+}
+
+/* -------- Skill List Animation -------- */
+.skills li {
+  /* Fade-in animation for each skill */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.7s forwards;
+}
+.skills li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.skills li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.skills li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.skills li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  /* Animation for skills */
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* ============================= */
 /* ------- Portfolio CSS ------- */
 /* ============================= */
 
+/* -------- Portfolio Section -------- */
 .portfolio {
+  /* Portfolio section layout */
   position: relative;
   clear: both;
   padding: 60px 0 30px 0;
@@ -627,12 +725,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-right: 0;
 }
 
+/* Each project card */
 .portfolio .portfolio-item {
   position: relative;
   height: 250px;
   overflow: hidden;
 }
 
+/* Project image and overlay */
 .portfolio .portfolio-item figure {
   background: #af9483;
   overflow: hidden;
@@ -687,6 +787,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   top: calc(25% - 18px);
 }
 
+/* Project title overlay */
 .portfolio .portfolio-item figure .portfolio-title {
   margin: 0;
   width: 100%;
@@ -731,7 +832,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* -------- Contact CSS -------- */
 /* ============================= */
 
+/* -------- Contact Section -------- */
 .contact {
+  /* Contact section layout */
   position: relative;
   padding: 60px 0;
 }
@@ -807,22 +910,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   box-shadow: none;
 }
 
-.contact .form button[type="submit"] {
-  padding: 7px 30px 10px 30px;
-  color: #af9483;
-  letter-spacing: 1px;
-  transition: 0.3s;
-  cursor: pointer;
-  border-radius: 0;
-  border: 1px solid #af9483;
-  background: #ffffff;
-}
-
-.contact .form button[type="submit"]:hover {
-  background: #af9483;
-  color: #ffffff;
-}
-
+/* Contact form input and button styles */
 .contact .form-control {
   border-radius: 8px;
   border: 1.5px solid #af9483;
@@ -843,17 +931,36 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #af9483;
 }
 
+.contact .form button[type="submit"] {
+  padding: 7px 30px 10px 30px;
+  color: #af9483;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 0;
+  border: 1px solid #af9483;
+  background: #ffffff;
+}
+
+.contact .form button[type="submit"]:hover {
+  background: #af9483;
+  color: #ffffff;
+}
+
 /* ============================= */
 /* --------- Footer CSS -------- */
 /* ============================= */
 
+/* -------- Footer -------- */
 .footer {
+  /* Footer background and text */
   position: relative;
   padding: 30px 0;
   text-align: center;
   background: #222222;
 }
 
+/* Copyright text */
 .footer .copyright p {
   color: #999999;
   font-size: 18px;
